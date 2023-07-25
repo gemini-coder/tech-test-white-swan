@@ -26,7 +26,7 @@ Create a React app that allows users view fixtures, and display odds for availab
 - features //Feature components
 - pages //Pages within the application
 - layouts //Base layout templates
-- lib //Library extensions
+- utils //Utilities for the application
 
 ### Authentication and authorisation
 login details: 
