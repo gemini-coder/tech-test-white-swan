@@ -25,7 +25,7 @@ const FixturesTable = ({ fixtures }: { fixtures: Fixture[] }) => {
     });
 
     const _fixtures = useMemo(() => {
-        const _f = fixtures.filter((fixture) => {
+        const _fixture = fixtures.filter((fixture) => {
             if (Object.values(filter).every((value) => value == ''))
                 return true;
             const a = Object.keys(filter).map((f) => {
@@ -37,8 +37,7 @@ const FixturesTable = ({ fixtures }: { fixtures: Fixture[] }) => {
             });
             return a.every((e) => e == true || e == undefined);
         });
-        console.log(_f);
-        return _f
+        return _fixture
             .sort((a, b) => {
                 if (sort.way == 'asc') {
                     if (a[sort.field] < b[sort.field]) return -1;

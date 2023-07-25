@@ -72,8 +72,8 @@ export class Auth {
         });
     }
 
-    public async signOut() {
-        await this.unsetUser();
+    public signOut() {
+        this.unsetUser();
     }
 
     private async setUser(user: TUser) {
@@ -86,7 +86,7 @@ export class Auth {
         }
     }
 
-    private async unsetUser(error?: { message: string }) {
+    private unsetUser(error?: { message: string }) {
         this.user = null;
         localStorage.removeItem('user');
         this.onUserChange(this.user, error);
